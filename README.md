@@ -8,22 +8,22 @@ Sistema web desarrollado en React que implementa un marketplace para conectar so
 
 ## 📑 Índice
 
-1. [Descripción del Proyecto](#descripción-del-proyecto)
+1. [Descripción del Proyecto](#descripci%C3%B3n-del-proyecto)
 2. [Requisitos del Sistema](#requisitos-del-sistema)
-3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-4. [Instalación y Configuración](#instalación-y-configuración)
-5. [Uso de la Aplicación](#uso-de-la-aplicación)
+3. [Tecnologías Utilizadas](#tecnolog%C3%ADas-utilizadas)
+4. [Instalación y Configuración](#instalaci%C3%B3n-y-configuraci%C3%B3n)
+5. [Uso de la Aplicación](#uso-de-la-aplicaci%C3%B3n)
 6. [Arquitectura del Proyecto](#arquitectura-del-proyecto)
 7. [Funcionalidades Implementadas](#funcionalidades-implementadas)
 8. [Modelos de Datos](#modelos-de-datos)
-9. [Gestión de Estado](#gestión-de-estado)
+9. [Gestión de Estado](#gesti%C3%B3n-de-estado)
 10. [Persistencia de Datos](#persistencia-de-datos)
 11. [Estructura de Carpetas](#estructura-de-carpetas)
 12. [Scripts Disponibles](#scripts-disponibles)
 13. [Seguridad y Rutas Protegidas](#seguridad-y-rutas-protegidas)
-14. [Características de UI/UX](#características-de-uiux)
+14. [Características de UI/UX](#caracter%C3%ADsticas-de-uiux)
 15. [Testing y Validaciones](#testing-y-validaciones)
-16. [Notas Técnicas](#notas-técnicas)
+16. [Notas Técnicas](#notas-t%C3%A9cnicas)
 17. [Licencia](#licencia)
 
 ---
