@@ -29,12 +29,28 @@ export default function CrearServicio() {
     fechaPreferida: "",
   });
 
+  const [insumosRequeridos, setInsumosRequeridos] = useState([]);
+  const [nuevoInsumo, setNuevoInsumo] = useState({ nombre: "", cantidad: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
     setError("");
+  };
+
+  const agregarInsumo = () => {
+    if (!nuevoInsumo.nombre.trim() || !nuevoInsumo.cantidad.trim()) {
+      setError("El nombre y la cantidad del insumo son obligatorios.");
+      return;
+    }
+    setInsumosRequeridos([...insumosRequeridos, { ...nuevoInsumo }]);
+    setNuevoInsumo({ nombre: "", cantidad: "" });
+    setError("");
+  };
+
+  const eliminarInsumo = (index) => {
+    setInsumosRequeridos(insumosRequeridos.filter((_, i) => i !== index));
   };
 
   const handleSubmit = async (e) => {
@@ -55,7 +71,10 @@ export default function CrearServicio() {
         solicitanteId: state.currentUser.id,
         estado: "PUBLICADO",
         cotizacionSeleccionadaId: null,
-        insumosRequeridos: [],
+        insumosRequeridos: insumosRequeridos.map((i) => ({
+          nombre: i.nombre.trim(),
+          cantidad: i.cantidad.trim(),
+        })),
       };
 
       // Llamada API
@@ -195,6 +214,73 @@ export default function CrearServicio() {
               required
             />
             <small className="text-muted">Seleccioná la fecha en que preferís que se realice el servicio</small>
+          </div>
+
+          {/* INSUMOS REQUERIDOS */}
+          <div className="mb-4">
+            <label className="fw-bold mb-2">
+              Insumos requeridos (opcional)
+            </label>
+            <p className="text-muted small mb-3">
+              Si el servicio requiere insumos específicos, agregalos acá. Los proveedores de insumos podrán crear packs basados en estos requerimientos.
+            </p>
+
+            <div className="card p-3 mb-3 bg-light">
+              <div className="row g-2">
+                <div className="col-md-5">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Nombre del insumo (ej: Pala)"
+                    value={nuevoInsumo.nombre}
+                    onChange={(e) => setNuevoInsumo({ ...nuevoInsumo, nombre: e.target.value })}
+                  />
+                </div>
+                <div className="col-md-5">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Cantidad (ej: 2 unidades)"
+                    value={nuevoInsumo.cantidad}
+                    onChange={(e) => setNuevoInsumo({ ...nuevoInsumo, cantidad: e.target.value })}
+                  />
+                </div>
+                <div className="col-md-2">
+                  <button
+                    type="button"
+                    className="btn btn-primary w-100"
+                    onClick={agregarInsumo}
+                  >
+                    + Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {insumosRequeridos.length > 0 && (
+              <div className="mt-3">
+                <strong className="small d-block mb-2">Insumos agregados:</strong>
+                <div className="list-group">
+                  {insumosRequeridos.map((insumo, index) => (
+                    <div
+                      key={index}
+                      className="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      <span>
+                        <strong>{insumo.nombre}</strong> — {insumo.cantidad}
+                      </span>
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-outline-danger"
+                        onClick={() => eliminarInsumo(index)}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="d-grid gap-2">
