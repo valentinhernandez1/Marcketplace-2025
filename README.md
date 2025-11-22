@@ -86,7 +86,7 @@ npm --version
 ### Paso 1: Clonar el Repositorio
 
 ```bash
-git clone <url-del-repositorio>
+git clone <https://github.com/valentinhernandez1/Marcketplace-2025/>
 cd web
 ```
 
