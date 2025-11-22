@@ -354,17 +354,6 @@ El proyecto utiliza **localStorage** del navegador para persistir datos entre se
 | `suppliesDB` | Base de datos de insumos |
 | `packDB` | Base de datos de packs de insumos |
 
-### Ventajas
-- ✅ Persistencia entre sesiones
-- ✅ No requiere backend
-- ✅ Rápido y eficiente para desarrollo
-
-### Limitaciones
-- ⚠️ Datos limitados al navegador
-- ⚠️ No hay sincronización entre dispositivos
-- ⚠️ Capacidad limitada (~5-10MB)
-
----
 
 ## 📁 Estructura de Carpetas
 
@@ -575,37 +564,8 @@ Las llamadas a API están simuladas con delays para simular latencia real:
 - Código modular y reutilizable
 - Minimización de re-renders innecesarios
 
----
 
-## 🚧 Mejoras Futuras
 
-- [ ] Integración con API backend real (REST/GraphQL)
-- [ ] Sistema de notificaciones en tiempo real
-- [ ] Chat entre usuarios
-- [ ] Sistema de pagos integrado
-- [ ] Calendario de servicios
-- [ ] Filtros avanzados de búsqueda
-- [ ] Exportación de reportes (PDF/Excel)
-- [ ] Sistema de calificaciones y reseñas
-- [ ] Geolocalización para servicios
-- [ ] Modo oscuro
-
----
-
-## 📚 Documentación Adicional
-
-Para una explicación detallada del código, conceptos de React, hooks, y arquitectura, consultar el archivo `PROMPT-PARA-CHATGPT.md` incluido en el proyecto.
-
----
-
-## 👨‍💻 Autor
-
-**Trabajo Práctico 2025**  
-Marketplace de Servicios con Insumos
-
-Desarrollado como parte del trabajo práctico académico.
-
----
 
 ## 📄 Licencia
 
