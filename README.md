@@ -20,6 +20,11 @@ Sistema web desarrollado en React que implementa un marketplace para conectar so
 10. [Persistencia de Datos](#persistencia-de-datos)
 11. [Estructura de Carpetas](#estructura-de-carpetas)
 12. [Scripts Disponibles](#scripts-disponibles)
+13. [Seguridad y Rutas Protegidas](#seguridad-y-rutas-protegidas)
+14. [Características de UI/UX](#características-de-uiux)
+15. [Testing y Validaciones](#testing-y-validaciones)
+16. [Notas Técnicas](#notas-técnicas)
+17. [Licencia](#licencia)
 
 ---
 
