@@ -5,7 +5,7 @@ import { AppContext } from "../../../context/AppContext.js";
 import { createCotizacionApi } from "../api/cotizacionesApi.js";
 import { v4 as uuid } from "uuid";
 import EmptyState from "../../../ui/components/EmptyState.jsx";
-import { handleError, logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
+import { logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
 
 export default function CrearCotizacion() {
   const { id } = useParams(); // ID del servicio

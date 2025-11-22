@@ -39,7 +39,7 @@ export function handleError(error, defaultMessage = "Ocurrió un error. Por favo
  * @param {string} context - Contexto donde ocurrió el error
  */
 export function logError(error, context = "Unknown") {
-  if (process.env.NODE_ENV === "development") {
+  if (import.meta.env.MODE === "development") {
     console.error(`[${context}] Error:`, error);
     
     // Si es un Error, mostrar stack trace

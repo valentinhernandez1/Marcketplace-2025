@@ -11,7 +11,6 @@ export default function ServicioCard({ servicio }) {
   };
 
   const estado = getEstadoBadge(servicio.estado);
-  const cotizacionesCount = 0; // Se puede calcular si se pasa como prop
 
   return (
     <div className="card shadow-sm border-0 p-4 rounded-4 fade-in scale-hover h-100" style={{

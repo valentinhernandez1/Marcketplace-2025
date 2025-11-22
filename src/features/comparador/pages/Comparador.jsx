@@ -6,7 +6,7 @@ import { compararCotizacionesApi } from "../api/comparadorApi.js";
 import { AppContext } from "../../../context/AppContext.js";
 import { updateServicioApi } from "../../servicios/api/serviciosApi.js";
 import { getUserName } from "../../../core/helpers/getUserName.js";
-import { handleError, logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
+import { logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
 
 export default function Comparador() {
   const { id } = useParams();

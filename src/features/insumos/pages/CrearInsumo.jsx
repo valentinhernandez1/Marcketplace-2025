@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../../../ui/components/Navbar.jsx";
 import { AppContext } from "../../../context/AppContext.js";
 import { createInsumoApi } from "../api/insumosApi.js";
-import { handleError, logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
+import { logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
 
 const CATEGORIAS = ["PINTURA", "JARDINERIA", "PLOMERIA", "ELECTRICIDAD", "CONSTRUCCION", "OTROS"];
 

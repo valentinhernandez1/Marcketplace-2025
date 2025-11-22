@@ -5,7 +5,7 @@ import { AppContext } from "../../../context/AppContext.js";
 import { calculatePackPrice } from "../../../core/logic/calculatePackPrice.js";
 import { createPackApi, getInsumosProveedorApi } from "../api/insumosApi.js";
 import { v4 as uuid } from "uuid";
-import { handleError, logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
+import { logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
 
 export default function CrearPackInsumos() {
   const navigate = useNavigate();

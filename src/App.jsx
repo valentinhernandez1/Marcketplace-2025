@@ -13,7 +13,7 @@ function AppWithAuth() {
   useEffect(() => {
     const saved = localStorage.getItem("user");
     if (saved) dispatch({ type: "LOGIN", payload: JSON.parse(saved) });
-  }, []);
+  }, [dispatch]);
 
   // 2) Cargar SIEMPRE servicios y cotizaciones cuando cambia el usuario
   useEffect(() => {
@@ -32,7 +32,8 @@ function AppWithAuth() {
     };
 
     cargarTodo();
-  }, [state.currentUser?.id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.currentUser?.id, dispatch]);
 
   // 3) Cargar perfil desde token 
   useEffect(() => {
@@ -45,7 +46,7 @@ function AppWithAuth() {
     };
 
     cargarPerfil();
-  }, [state.currentUser?.token]);
+  }, [state.currentUser?.token, dispatch]);
 
   return <RouterApp />;
 }

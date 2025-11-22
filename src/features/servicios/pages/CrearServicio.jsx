@@ -4,7 +4,7 @@ import Navbar from "../../../ui/components/Navbar.jsx";
 import { AppContext } from "../../../context/AppContext.js";
 import { createServicioApi } from "../api/serviciosApi.js";
 import { validateService } from "../../../core/logic/validateService.js";
-import { handleError, logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
+import { logError, getFriendlyErrorMessage } from "../../../core/helpers/errorHandler.js";
 
 const CATEGORIAS = [
   "JARDINERIA",
